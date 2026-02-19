@@ -22,6 +22,7 @@ import androidx.compose.material3.darkColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.newstart.ui.theme.NewStartTheme
@@ -39,11 +40,10 @@ class MainActivity : ComponentActivity() {
 }
 
 
-
 @Composable
-fun CustomText(text: String, num: Int){
+fun CustomText(text: String, num: Int) {
     Text(
-        text=("$text $num")
+        text = ("$text $num")
     )
 }
 
@@ -78,12 +78,20 @@ fun CustomText(text: String, num: Int){
 @Composable
 fun GreetingPreview() {
     NewStartTheme {
-        Box(modifier=Modifier.fillMaxSize()){
-            Box(modifier=Modifier
-                .height(100.dp)
-                .width(200.dp)
-                .background(color=MaterialTheme.colorScheme.secondary)
-            )
+        Box(
+            modifier = Modifier.fillMaxSize(),
+            contentAlignment = Alignment.Center
+
+        ) {
+            Box(
+                modifier = Modifier
+                    .height(100.dp)
+                    .width(200.dp)
+                    .background(color = MaterialTheme.colorScheme.secondary),
+                contentAlignment = Alignment.Center
+            ) {
+                Text(text = "Hello Kshitiz", color = Color.White)
+            }
         }
     }
 }
