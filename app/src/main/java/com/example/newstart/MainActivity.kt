@@ -1,16 +1,29 @@
 package com.example.newstart
 
+import android.R
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.darkColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.example.newstart.ui.theme.NewStartTheme
 
 class MainActivity : ComponentActivity() {
@@ -19,29 +32,62 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             NewStartTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+
             }
         }
     }
 }
 
+
+
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
+fun CustomText(text: String, num: Int){
     Text(
-        text = "Hello $name!",
-        modifier = modifier
+        text=("$text $num")
     )
 }
+
+//@Preview(showBackground = true)
+//@Composable
+//fun GreetingPreview() {
+//    NewStartTheme {
+//        Column(
+//            modifier=Modifier.fillMaxSize(),
+//            horizontalAlignment= Alignment.CenterHorizontally,
+//            verticalArrangement= Arrangement.Center
+//        ) {
+//            Surface(
+//                modifier=Modifier
+//                .width(40.dp)
+//                .height(20.dp),
+//                color= MaterialTheme.colorScheme.primary
+//            ) { }
+//            Spacer(modifier=Modifier.height(5.dp))
+//            Surface(
+//                modifier=Modifier
+//                .width(40.dp)
+//                .height(20.dp),
+//                color= MaterialTheme.colorScheme.primary
+//            ) { }
+//        }
+//    }
+//}
+
 
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
     NewStartTheme {
-        Greeting("Android")
+        Box(modifier=Modifier.fillMaxSize()){
+            Box(modifier=Modifier
+                .height(100.dp)
+                .width(200.dp)
+                .background(color=MaterialTheme.colorScheme.secondary)
+            )
+        }
     }
 }
+
+
+
+
