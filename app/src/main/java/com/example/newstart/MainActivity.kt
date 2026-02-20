@@ -14,6 +14,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.text.selection.DisableSelection
+import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
@@ -24,7 +26,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.newstart.ui.theme.NewStartTheme
 
 class MainActivity : ComponentActivity() {
@@ -90,7 +94,16 @@ fun GreetingPreview() {
                     .background(color = MaterialTheme.colorScheme.secondary),
                 contentAlignment = Alignment.Center
             ) {
-                Text(text = "Hello Kshitiz", color = Color.White)
+                // with this we can select the text.
+                SelectionContainer {
+
+                    Column {
+                        Text(text = "Hello Kshitiz", color = Color.White, fontSize = 30.sp)
+                        DisableSelection {
+                            Text(text = "Hello Kshitiz", color = Color.White, fontSize = 30.sp)
+                        }
+                    }
+                }
             }
         }
     }
