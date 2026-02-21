@@ -36,7 +36,7 @@ fun ExpandableCard() {
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(top=50.dp)
+            .padding(top = 50.dp)
             .animateContentSize(
                 animationSpec = tween(
                     durationMillis = 300,
@@ -78,9 +78,9 @@ fun ExpandableCard() {
                     )
                 }
             }
-            if(expendedState){
+            if (expendedState) {
                 Text(
-                    text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. " +
+                    text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. " +
                             "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
                     fontSize = MaterialTheme.typography.bodyMedium.fontSize,
                     fontWeight = MaterialTheme.typography.bodyMedium.fontWeight,

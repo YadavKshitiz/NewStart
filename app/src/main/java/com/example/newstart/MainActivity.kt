@@ -32,6 +32,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.newstart.ui.ExpandableCard
 import com.example.newstart.ui.ExpandableCardPreview
+import com.example.newstart.ui.TextFieldFile
 import com.example.newstart.ui.theme.NewStartTheme
 
 class MainActivity : ComponentActivity() {
@@ -40,7 +41,6 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             NewStartTheme {
-                ExpandableCardPreview()
 
             }
         }
@@ -82,36 +82,36 @@ fun CustomText(text: String, num: Int) {
 //}
 
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    NewStartTheme {
-        Box(
-            modifier = Modifier.fillMaxSize(),
-            contentAlignment = Alignment.Center
-
-        ) {
-            Box(
-                modifier = Modifier
-                    .height(100.dp)
-                    .width(200.dp)
-                    .background(color = MaterialTheme.colorScheme.secondary),
-                contentAlignment = Alignment.Center
-            ) {
-                // with this we can select the text.
-                SelectionContainer {
-
-                    Column {
-                        Text(text = "Hello Kshitiz", color = Color.White, fontSize = 30.sp)
-                        DisableSelection {
-                            Text(text = "Hello Kshitiz", color = Color.White, fontSize = 30.sp)
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+//@Preview(showBackground = true)
+//@Composable
+//fun GreetingPreview() {
+//    NewStartTheme {
+//        Box(
+//            modifier = Modifier.fillMaxSize(),
+//            contentAlignment = Alignment.Center
+//
+//        ) {
+//            Box(
+//                modifier = Modifier
+//                    .height(100.dp)
+//                    .width(200.dp)
+//                    .background(color = MaterialTheme.colorScheme.secondary),
+//                contentAlignment = Alignment.Center
+//            ) {
+//                // with this we can select the text.
+//                SelectionContainer {
+//
+//                    Column {
+//                        Text(text = "Hello Kshitiz", color = Color.White, fontSize = 30.sp)
+//                        DisableSelection {
+//                            Text(text = "Hello Kshitiz", color = Color.White, fontSize = 30.sp)
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//    }
+//}
 
 
 
