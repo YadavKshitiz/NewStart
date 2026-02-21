@@ -32,6 +32,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.newstart.ui.ExpandableCard
 import com.example.newstart.ui.ExpandableCardPreview
+import com.example.newstart.ui.GoogleButton
 import com.example.newstart.ui.TextFieldFile
 import com.example.newstart.ui.theme.NewStartTheme
 
@@ -41,6 +42,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             NewStartTheme {
+
 
             }
         }
