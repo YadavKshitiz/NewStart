@@ -1,4 +1,4 @@
-package com.example.newstart
+package com.example.newstart.ui.theme
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
