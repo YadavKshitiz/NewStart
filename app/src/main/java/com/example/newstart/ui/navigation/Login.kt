@@ -40,7 +40,11 @@ fun Login(
             Text(
                 modifier = Modifier
                     .clickable {
-                        navController.navigate(Home_Route)
+                        navController.navigate(Home_Route){
+                            popUpTo(Home_Route){
+                                inclusive=true
+                            }
+                        }
                     },
                 text = "Go Back",
                 color = Color.Yellow,
