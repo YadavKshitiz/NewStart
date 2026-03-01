@@ -1,21 +1,24 @@
 package com.example.newstart.ui.navigation
 
+import android.util.*
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.navArgument
+import androidx.navigation.navigation
 
 @Composable
 fun SetNavGraph(navController: NavHostController) {
     NavHost(
         navController = navController,
-        startDestination = Screen.Home.route
+        startDestination = Home_Route,
+        route = Root_Route
     ) {
-        composable(route = Screen.Home.route) {
-            HomeScreen(navController = navController)
-        }
-        composable(route = Screen.Detail.route) {
-            DetailScreen(navController = navController)
-        }
+        homeNavGraph(navController=navController)
+
+        authNavGraph(navController=navController)
+
     }
 }

@@ -13,7 +13,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 
 @Composable
-fun HomeScreen(
+fun Login(
     navController: NavController
 ) {
     Box(
@@ -29,10 +29,10 @@ fun HomeScreen(
             Text(
                 modifier = Modifier
                     .clickable {
-                        navController.navigate(Screen.Detail.passId())
+                        navController.navigate(Screen.SignUp.route)
                     },
-                text = "HomeScreen",
-                color = Color.Black,
+                text = "Login",
+                color = Color.Yellow,
                 fontSize = MaterialTheme.typography.headlineMedium.fontSize,
                 fontWeight = FontWeight.Bold
             )
@@ -40,10 +40,10 @@ fun HomeScreen(
             Text(
                 modifier = Modifier
                     .clickable {
-                        navController.navigate(Authentication_Route)
+                        navController.navigate(Home_Route)
                     },
-                text = "LogIn/SignUp",
-                color = Color.Black,
+                text = "Go Back",
+                color = Color.Yellow,
                 fontSize = MaterialTheme.typography.bodyLarge.fontSize,
                 fontWeight = FontWeight.Bold
             )
@@ -52,8 +52,8 @@ fun HomeScreen(
 }
 
 
-@Preview(showBackground = true)
-@Composable
-fun HomeScreenPreview() {
-    HomeScreen(navController = rememberNavController())
-}
+//@Preview(showBackground = true)
+//@Composable
+//fun LoginPreview() {
+//    Login(navController = rememberNavController())
+//}

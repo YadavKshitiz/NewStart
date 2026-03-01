@@ -9,5 +9,4 @@ fun StartNavigation() {
     lateinit var navController: NavHostController
     navController = rememberNavController()
     SetNavGraph(navController = navController)
-
 }
