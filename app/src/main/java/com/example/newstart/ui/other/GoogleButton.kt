@@ -1,4 +1,4 @@
-package com.example.newstart.ui
+package com.example.newstart.ui.other
 
 import android.R
 import androidx.compose.animation.animateContentSize
