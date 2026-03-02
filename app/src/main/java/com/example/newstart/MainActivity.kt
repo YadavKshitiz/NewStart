@@ -11,7 +11,6 @@ import com.example.newstart.ui.appbar.MainViewModel
 
 class MainActivity : ComponentActivity() {
 
-    private val mainViewModel: MainViewModel by viewModels()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,8 +18,6 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             NewStartTheme {
-                MainScreen(mainViewModel = mainViewModel)
-
 
             }
         }
