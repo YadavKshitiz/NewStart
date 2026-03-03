@@ -12,6 +12,15 @@ import androidx.compose.ui.graphics.*
 import androidx.compose.ui.unit.*
 
 @Composable
+fun DisplayAnimatedShimmer(){
+    Column {
+        repeat(7){
+            AnimatedShimmer()
+        }
+    }
+}
+
+@Composable
 fun AnimatedShimmer() {
     val shimmerColors = listOf(
         Color.LightGray.copy(0.6f),
